@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	char name1[10], enc[10];
+	char key[100];
+	cout << "Enter your name: ";
+	cin >> name1;
+	cout << "Please enter the key encryption!";
+	cin >> key;
+
+	cout << "The encrypted name is: ";
+	for (int i = 0; i < strlen(name1); i++) {
+		enc[i] = (int)name1[i] + strlen(key);
+		cout << enc[i];
+	}
+	cout << endl;
+
+	system("pause");
+	return 0;
+}
